@@ -4,9 +4,10 @@
 .user-area select {
   border: none;
   outline: none;
+  padding-right: 10px;
   -webkit-appearance: none;
-  background-image: url('/images/stories/select-arrow-pink.png');
-  background-position: right center;
+  background-image: url('img/down-arrow.png');
+  background-position: right 60%;
   background-repeat: no-repeat;
   line-height: 1em;
   /* for FF */
@@ -115,4 +116,134 @@
 }
 .actual {
   margin-bottom: 100px;
+}
+.video-review {
+  margin-bottom: 100px;
+}
+
+.feature-card {
+  margin-bottom: 100px;  
+}
+
+.feature-card-item {
+  min-height: 200px;
+  min-width: 270px;
+  border: 1px solid #9c9c9c;
+}
+
+
+
+
+
+
+
+.foto-catalog {
+  width: 1170px;
+  height: 760px;
+  margin-bottom: 100px;
+}
+.catalog-img {
+  position: relative;
+  float: left;
+  box-sizing: border-box;
+  outline: 3px solid #fff;
+  outline-offset: -30px;
+}
+.img1, .img4, .img5 {
+  margin-right: 10px;
+}
+.img2, .img3 {
+  margin-bottom: 10px;
+}
+
+.catalog-text-block {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: auto;
+  max-height: 100px;
+  padding: 18px;
+  color: #fff;
+  font-family: "Exo 2", sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 22px;
+  text-transform: uppercase;
+  background-position:  0% 100%; 
+/*   outline: 2px solid red; */
+}
+.block1 {
+  background-image: url("img/foto1.jpg");
+}
+.block2 {
+  background-image: url("img/foto2.jpg");
+}
+.block3 {
+  background-image: url("img/foto3.jpg");
+}
+.block4 {
+  background-image: url("img/foto4.jpg");
+}
+.block5 {
+  background-image: url("img/foto5.jpg");
+  width: 210px;
+  font-size: 20px;
+  line-height: 24px;
+}
+.block6 {
+  background-image: url("img/foto6.jpg");
+  font-size: 20px;
+  line-height: 24px;
+}
+.divider {
+  min-height: 180px;
+  padding: 50px 0;
+  margin-bottom: 100px;
+  color: #fff;
+  background: url(img/divider.jpg) no-repeat;
+}
+.divider-col {
+  padding: 0 100px;
+}
+.social {
+  padding: 0;
+}
+.social a {
+  color: #fff;
+  line-height: 40px;
+}
+.social li {
+  background-color: transparent;
+  border: 1px solid white;
+  width: 40px;
+  height: 40px;
+  margin-right: 20px;
+  padding: 0;
+  text-align: center;
+  line-height: 40px;
+  vertical-align: middle;
+  list-style: none;
+}
+.social li:hover {
+  border-color: #527bff;
+}
+.social li:hover a {
+  color: #527bff;
+}
+input[type="email"] {
+  border: none;
+  background-color: transparent;
+  color: #fff;
+  margin-top: 10px;
+}
+
+.form-sub {
+  width: 90%;
+  border-bottom: 1px solid #fff;
+}
+
+.btn-sub {
+  border: none;
+  background: transparent;
+  color: #fff;
 }
