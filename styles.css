@@ -513,10 +513,15 @@ header .container {
   position: absolute;
   top: 0;
   right: 0;
+  width: 280px;
+  height: 450px;
 }
-.card-hover-item .card-dateil img {
+.card-hover-item .card-detail img {
+  position: relative;
   width: 220px;
   height: 332px;
+  top: 0;
+  right: -2px;
 }
 .card-galery {
   padding: 5px 9px;
@@ -566,10 +571,12 @@ header .container {
 }
 .card-item:hover .card-hover-item {
   display: flex;
+/*
   width: 280px;
   height: 450px;
+*/
   background-color: #fff;
-  border: 1px solid #cdcdcd;
+  outline: 1px solid #cdcdcd;
   cursor: pointer;
 }
 
