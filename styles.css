@@ -205,6 +205,7 @@ header .container {
   width: 20px;
   height: 20px;
   text-align: center;
+  color: #fff;
   line-height: 20px;
   background-color: #d35353;
   border-radius: 50%;
@@ -249,29 +250,30 @@ header .container {
 .dropdown:hover .dropdown-menu {
     display: block;
 }
+.toggle-menu {
+  padding-left: 50px;
+  margin-right: 50px;
+  line-height: 20px;
+}
+button[data-toggle="collapse"] {
+  margin: 0 auto;
+  color: #484848;
+  font-family: "Exo 2", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 32px;
+  text-transform: uppercase;
+  background: transparent;
+  border: none;
+  outline: none;
+}
 
 .header {
-/*  position: relative;*/
   width: 100%;
   min-height: 500px;
   border-top: 1px solid #cdcdcd;
+  background: url("img/banner.jpg") no-repeat center;
 }
-.header img {
-/*
-  position: absolute;
-  top: 0;
-  left: 0;
-*/
-  min-width: 100%;
-  min-height: 500px;
-}
-/*
-  position: relative;
-  top: 0;
-  left: 0;
-}
-*/
-
 
 .header {
   margin-bottom: 100px;
@@ -521,10 +523,10 @@ header .container {
   width: 220px;
   height: 332px;
   top: 0;
-  right: -2px;
+  right: 1px;
 }
 .card-galery {
-  padding: 5px 9px;
+  
 }
 .card-galery i {
   text-align: center;
@@ -535,9 +537,102 @@ header .container {
   margin-top: 2px;
   margin-bottom: 3px;
 }
-.card-galery .active {
+.card-galery img.active {
   outline: 1px solid #cdcdcd;
 }
+/*--------- styles for vertical sloder ------*/
+
+
+
+.jcarousel-wrapper {  
+  /*the same as card galery*/
+  padding: 25px 10px;
+  width: 70px;
+  height: 376px;
+/*
+    float: left;
+    margin-top: 50px;
+    margin-left: 20px;
+    position: relative;
+
+    width: 90px;
+    height: 700px;
+*/
+}
+
+/** Carousel **/
+
+.jcarousel {
+    position: relative;
+    overflow: hidden;
+    width: 42px;
+    height: 376px;
+}
+
+.jcarousel img {
+    display: block;
+}
+
+.jcarousel ul {
+    width: 100%;
+    height: 20000em;
+    position: relative;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.jcarousel li {
+    float: left;
+}
+.jcarousel ul a {
+  display: inline-block;
+}
+/** Carousel Controls **/
+
+.jcarousel-control-prev,
+.jcarousel-control-next {
+    position: absolute;
+    left: 15px;
+    width: 30px;
+    text-align: center;
+    color: #cdcdcd;
+    text-decoration: none;
+    font: 18px/24px;
+
+}
+.jcarousel-control-prev:hover,
+.jcarousel-control-next:hover {
+  color: #cdcdcd;
+  text-decoration: none;
+}
+
+.jcarousel-control-prev {
+    top: 0;
+}
+
+.jcarousel-control-next {
+    bottom: 25px;
+}
+
+.jcarousel-control-prev:hover span,
+.jcarousel-control-next:hover span {
+    display: block;
+}
+
+.jcarousel-control-prev.inactive,
+.jcarousel-control-next.inactive {
+    opacity: .5;
+    cursor: default;
+}
+.current {
+  border: 1px solid black;
+}
+
+
+
+
+/*------------- end vertical slider  ---------*/
 .card-detail p {
   margin-bottom: 15px;
   color: #353535;
@@ -560,15 +655,21 @@ header .container {
   margin-bottom: 10px;
 }
 .size span {
-  margin-right: 10px;
-}
-.size .text-bordered {
   display: inline-block;
+  margin-right: 10px;
+  padding-top:5px;
   width: 25px;
   height: 25px;
-  border: 1px solid #ccc;
-  padding-top:5px
 }
+.size .text-bordered {
+/*  display: inline-block;*/
+/*
+  width: 25px;
+  height: 25px;
+*/
+  outline: 1px solid #ccc;
+}
+
 .card-item:hover .card-hover-item {
   display: flex;
 /*
@@ -577,6 +678,7 @@ header .container {
 */
   background-color: #fff;
   outline: 1px solid #cdcdcd;
+  outline-offset: -1px;
   cursor: pointer;
 }
 
@@ -870,6 +972,9 @@ input[type="email"] {
   font-weight: 300;
   font-style: italic;
 }
+.right-text .quote {
+  left: 198px;
+}
 
 
 .videoreview {
@@ -1015,6 +1120,13 @@ input[type="email"] {
 .top-footer {
   color: #fff;
 }
+.top-footer .container {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+}
 .top-footer li {
   list-style: none;
 }
@@ -1083,8 +1195,198 @@ input[type="email"] {
   height: 50px;
   background: #2d2d2d;
   color: #656565;
-  font-family: Exo2;
+  font-family: "Exo 2", sans-serif;
   font-size: 12px;
   font-weight: 400;
   line-height: 50px;
+}
+
+
+
+
+
+@media only screen and (max-width: 768px) {
+  .container {
+    max-width: 732px;
+  }
+  header .container {
+    padding: 0;
+  }
+  .top-menu {
+    width: 750px;
+  }
+  .top-menu .navbar-nav {
+    display: none;
+  }
+  .top-menu .status-link {
+    display: inline-block;
+    font-size: 14px;
+  }
+  .user-area {
+    float: right;
+    width: 178px;
+  }
+  .head {
+    position: relative;
+    min-height: 160px;
+  }
+  .head .row {
+    min-width: 650px;
+  }
+  .head .col:first-child {
+    max-width: 530px;
+    padding-left: 10px;
+  }
+  .head .col:nth-child(2) {
+    max-width: 755px;
+    position: absolute;
+    top: 72px;
+    left: 5px;
+  }
+  .head .form-search {
+    width: 100%;
+  }
+  .form-search input[type="search"] {
+    width: 100%;
+  }
+  .head .col:nth-child(3) {
+    max-width: 160px;
+  }
+  .head .col:last-child {
+    max-width: 75px;
+  }
+  .main-menu .navbar-collapse {
+    background-color: #fff;
+  }
+  .main-menu .navbar-collapse .navbar-nav .nav-item a.nav-link {
+    display: inline-block;
+    padding-left: 10px;
+  }
+  .header {
+    min-height: 300px;
+    border-top: none;
+    background: url("img/banner.jpg") no-repeat;
+    background-position: 71% 50%;
+    background-size: cover;
+  }
+  .models {
+    display: none;
+  }
+  .features {
+    display: none;
+  }
+  .actual .actual-cards .card-item:nth-child(-2n+3) {
+    display: none;
+  }
+  .video-review .actual-cards .card-item:nth-child(even) {
+    display: none;
+  }
+  .feature-card .col-3 {
+/*    flex: 0 0 50%;*/
+    max-width: 50%;
+/*    justify-content: space-between;*/
+  }
+  .feature-card .col-3:nth-child(odd) {
+    margin-left: 90px;
+  }
+  .feature-card .col-3:first-child {
+    margin-bottom: 30px;
+  }
+  .feature-card-item {
+    width: 270px;
+  }
+  .foto-catalog {
+    display: none;
+  }
+  .divider-col {
+    padding: 0;
+  }
+  .col-social {
+    padding-left: 10px;
+  }
+  .col-subscribe {
+    padding-right: 10px;
+  }
+  .form-sub {
+    width: 100%;
+  }
+  input[type="email"] {
+    width: 100%;
+  }
+  .review .col-6 {
+    max-width: 100%;
+    flex: none;
+  }
+  .review .col-6:last-child {
+    display: none;
+  }
+  .review-item {
+    margin: 0 auto;
+    width: 505px;
+  }
+  .videoreview .col-4:last-child {
+    display: none;
+  }
+  .videoreview .col-4 {
+    max-width: 50%;
+    flex: none;
+  }
+  .news .col-6 {
+    max-width: 100%;
+    flex: none;
+  }
+  .news .col-6:last-child {
+    display: none;
+  }
+  .news-item {
+    margin: 0 auto;
+    width: 570px;
+  }
+  .grey-background {
+    display: none;
+  }
+  .last-chapter {
+    display: none;
+  }
+  .last-col-left {
+    padding: 0 10px;
+    width: 100%;
+  }
+  .last-item {
+    width: 100%;
+    padding: 0px 5px;
+  }
+  .last-col-right {
+    padding: 0 10px;
+    width: 100%;
+  }
+  .last-item {
+    width: 100%;
+    padding: 0px 5px;
+  }
+  .top-footer {
+    height: 475px;
+  }
+  .top-footer .container {
+    display: block;
+  }
+  .footer-item {
+    float: left;
+  }
+  .info {
+    width: 240px;
+    margin-right: 65px;
+  }
+  .main {
+    width: 181px;
+    margin-right: 55px;
+    padding-left: 0;
+  }
+  .help {
+    width: 190px;
+    margin-right: 0;
+  }
+  .custumers {
+    margin-right: 85px;
+  }
 }
