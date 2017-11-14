@@ -975,6 +975,9 @@ input[type="email"] {
 .right-text .quote {
   left: 198px;
 }
+#carouselReviewControls {
+  display: none;
+}
 
 
 .videoreview {
@@ -1325,6 +1328,14 @@ input[type="email"] {
     margin: 0 auto;
     width: 505px;
   }
+  .review .row {
+    display: none;
+  }
+  #carouselReviewControls {
+    display: block;
+  }
+  
+  
   .videoreview .col-4:last-child {
     display: none;
   }
