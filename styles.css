@@ -1224,7 +1224,7 @@ input[type="email"] {
   }
   .user-area {
     float: right;
-    width: 178px;
+    width: 184px;
   }
   .head {
     position: relative;
@@ -1330,6 +1330,9 @@ input[type="email"] {
   .videoreview .col-4 {
     max-width: 50%;
     flex: none;
+  }
+  .red-background {
+    width: 351px;
   }
   .news .col-6 {
     max-width: 100%;
