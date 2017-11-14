@@ -1257,6 +1257,7 @@ input[type="email"] {
   }
   .main-menu .navbar-collapse {
     background-color: #fff;
+    z-index: 16;
   }
   .main-menu .navbar-collapse .navbar-nav .nav-item a.nav-link {
     display: inline-block;
@@ -1391,5 +1392,158 @@ input[type="email"] {
   }
   .custumers {
     margin-right: 85px;
+  }
+}
+
+
+
+
+@media only screen and (max-width: 320px) {
+  body {
+    overflow-x: hidden;
+  }
+  .container {
+    max-width: 300px;
+  }
+  header {
+    min-height: 200px;
+  }
+  .top-menu {
+    display: none;
+  }
+  .head {
+    border: none;
+  }
+  .head .row {
+    min-width: 320px;
+    justify-content: flex-end;
+  }
+  .head .logo {
+    padding: 20px 0;
+    margin-right: 0;
+    text-align: center;
+  }
+  .head .col:first-child {
+    display: block;
+    max-width: 320px;
+    padding-left: 0;
+  }  
+  .head .col:nth-child(2) {
+    max-width: 300px;
+    position: absolute;
+    top: 104px;
+    left: 10px;
+  }
+  .head .col:nth-child(3) {
+    max-width: 95px;
+    padding-left: 15px;
+  }
+  .form-search button {
+    bottom: 0;
+  }
+  .wish-list,
+  .cart {
+    margin-top: 20px;
+  }
+  .wish-list p,
+  .cart p {
+    display: none;
+  }
+  .main-menu {
+    position: absolute;
+    top: 70px;
+    left: 0;
+  }
+  .toggle-menu {
+    padding-left: 0;
+    margin-right: 0;
+  }
+  .header {
+    background: url("img/banner-small.jpg") no-repeat;
+    margin-bottom: 70px;
+  }
+  .big-heading {
+    margin-bottom: 30px;
+  }
+  .big-heading p {
+    margin-bottom: 30px;
+  }
+  .big-heading::after {
+    content: "";
+    border: none;
+  }
+  .actual .actual-cards .card-item:nth-child(n+4) {
+    display: none;
+  }
+  .actual .actual-cards .card-item {
+    margin: 0 auto;
+  }
+  .actual {
+    margin-bottom: 65px;
+  }
+  .video-review .actual-cards .card-item:first-child {
+    display: none;
+  }
+  .video-review .actual-cards .card-item:last-child {
+    display: none;
+  }
+  .video-review .actual-cards .card-item {
+    margin: 0 auto;
+  }
+  .video-review .actual-cards {
+    padding-top: 25px;
+  }
+  .video-review {
+    margin-bottom: 60px;
+  }
+  .feature-card .col-3:nth-child(2n+1) {
+    margin-left: 0;
+  }
+  .feature-card .col-3 {
+    min-width: 100%;
+    margin-bottom: 30px;
+  }
+  .feature-card-item {
+    margin: 0 auto;
+  }
+  .feature-card {
+    margin-bottom: 70px;
+  }
+  .divider,
+  .review,
+  .news,
+  .last {
+    display: none;
+  }
+  .videoreview {
+    margin-bottom: 70px;
+  }
+  .videoreview .col-4 {
+    max-width: 100%;
+  }
+  .red-background {
+    width: 91%;
+    height: 79%;
+  }
+  .top-footer {
+    height: 1030px;
+  }
+  .footer-item {
+    float: none;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .footer-item .footer-caption {
+    padding-top: 30px;
+    padding-bottom: 15px;
+  }
+  .info {
+    text-align: left;
+  }
+  .footer-item p {
+    padding-left: 55px;
+  }
+  .footer-item .footer-sign {
+    padding-left: 30px;
   }
 }
