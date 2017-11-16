@@ -118,15 +118,23 @@ if (matchMedia) {
 }
 
 //-------------------------- replace menu item to droop down ----------------------
-//if (matchMedia) {
-//  const mediaQuery = window.matchMedia('(max-width: 1055px)');
-////  $('#dropdown').append( $('#collapse-item-7>a') );
+
+
+//var mql = window.matchMedia('all and (max-width: 1055px)');
+//if (mql.matches) {
 //  $('#collapse-item-7>a').appendTo( $('#dropdown') );
-  
-var mql = window.matchMedia('all and (max-width: 1055px)');
-if (mql.matches) {
-  $('#collapse-item-7>a').appendTo( $('#dropdown') );
-  $('#collapse-item-7').remove();
-  $('#dropdown .nav-link').addClass('dropdown-item');
-  $('#dropdown .nav-link').removeClass('nav-link');
-}
+//  $('#collapse-item-7').remove();
+//  $('#dropdown .nav-link').addClass('dropdown-item');
+//  $('#dropdown .nav-link').removeClass('nav-link');
+//}
+
+//--------------------------- copy-paste menu where onen a hamburger ---------------
+//$('#navbarNavDropdown').click( sayHallo() );
+//function sayHallo () {
+//  alert('Hallo!');
+//}
+//
+//$('#navbarNavDropdown').on('click', sayHallo());
+$('.navbar-toggler-icon').click(function() {
+     dropdown
+ });
