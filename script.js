@@ -90,8 +90,43 @@ jQuery(function(f){
     });
 });
 
+//----------------------- hide top menu to select ------------------------------
+//$("<select />").appendTo(".top-menu .navbar-nav");
+
+$("<option />", {
+   "selected": "selected",
+   "value"   : "",
+   "text"    : "Меню >"
+}).appendTo(".select");
+
+$(".top-menu .navbar-nav a").each(function() {
+ var el = $(this);
+ $("<option />", {
+     "value"   : el.attr("href"),
+     "text"    : el.text()
+ }).appendTo(".select");
+});
+
+$(".select").change(function() {
+  window.location = $(this).find("option:selected").val();
+});
+
 //-------------------------- delete text from button when screen 320px ----------------------------
 if (matchMedia) {
     const mq = window.matchMedia("(max-width: 320px)");
     $(".toggle-menu").html("");
+}
+
+//-------------------------- replace menu item to droop down ----------------------
+//if (matchMedia) {
+//  const mediaQuery = window.matchMedia('(max-width: 1055px)');
+////  $('#dropdown').append( $('#collapse-item-7>a') );
+//  $('#collapse-item-7>a').appendTo( $('#dropdown') );
+  
+var mql = window.matchMedia('all and (max-width: 1055px)');
+if (mql.matches) {
+  $('#collapse-item-7>a').appendTo( $('#dropdown') );
+  $('#collapse-item-7').remove();
+  $('#dropdown .nav-link').addClass('dropdown-item');
+  $('#dropdown .nav-link').removeClass('nav-link');
 }
