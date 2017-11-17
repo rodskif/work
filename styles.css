@@ -771,23 +771,25 @@ figure::after {
   text-decoration: none;
 }
 .feature-card {
+  display: block;
+  text-align: center;
   margin-bottom: 100px;  
 }
-.feature-card .row {
-  justify-content: space-between;
+.feature-wrap {
+  display: inline-block;
+  font-size: 0;
 }
 .feature-card-item {
+  display: inline-block;
+  vertical-align: top;
   position: relative;
   height: 200px;
-  width: 270px;
+  width: 268px;
   border: 1px solid #9c9c9c;
   cursor: pointer;
+  margin-right: 20px;
+  padding-top: 50px;
 }
-/*
-.feature-card-item:last-child img {
-  margin-top: 20px;
-}
-*/
 .feature-card-item p {
   font-family: "Exo 2", Arial, sans-serif;
   font-size: 14px;
@@ -1122,7 +1124,7 @@ input[type="email"] {
   position: absolute;
   top: -40px;
   left: 0;
-  width: 41%;
+  min-width: 38%;
   min-height: 115%;
   background-color: #f6f6f6;
   z-index: -5;
@@ -1555,6 +1557,9 @@ input[type="email"] {
 @media only screen and (max-width: 1025px) {
   .top-menu {
     padding-left: 220px;
+  }
+  .main-menu {
+    padding-left: 50px;
   }
 }
 /*---------------------------------------------- 1010 ----------------------------*/
@@ -2090,6 +2095,7 @@ input[type="email"] {
 }
 /*--------------------------------------- 600 ----------------------------------------*/
 @media only screen and (max-width: 600px) {
+/*
   .feature-card .col-3 {
     min-width: 50%;
     margin-bottom: 30px;
@@ -2097,11 +2103,18 @@ input[type="email"] {
   .feature-card-item {
     margin: 0 auto;
   }
+*/
   .feature-card {
     margin-bottom: 70px;
   }
   .news {
     display: none;
+  }
+}
+/*--------------------------------------- 595 ----------------------------------------*/
+@media only screen and (max-width: 595px) {
+  .feature-card-item {
+    margin-bottom: 30px;
   }
 }
 /*----------------------------------------- 590 -----------------------------------------------*/
@@ -2497,6 +2510,7 @@ input[type="email"] {
     display: none; 
   }
   
+/*
   .feature-card .col-3:nth-child(2n+1) {
     margin-left: 0;
   }
@@ -2507,6 +2521,7 @@ input[type="email"] {
   .feature-card-item {
     margin: 0 auto;
   }
+*/
   .feature-card {
     margin-bottom: 70px;
   }
