@@ -135,6 +135,16 @@ if (matchMedia) {
 //}
 //
 //$('#navbarNavDropdown').on('click', sayHallo());
+
 $('.navbar-toggler-icon').click(function() {
-     dropdown
+//      alert('Hallo!');
+  $('#dropdown>a').appendTo($('#navbarNavDropdown>ul'));
+  $('.dropdown').remove();
+  $('#navbarNavDropdown>ul>a').addClass('nav-link dropdown-link');
+  $('#navbarNavDropdown>ul>a').removeClass('dropdown-item');
+  
+  $('#navbarNavDropdown>ul>li>a').addClass('dropdown-link');
+  
+  $('.sell').appendTo($('#navbarNavDropdown>ul'));
+    
  });

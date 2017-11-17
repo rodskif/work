@@ -265,7 +265,7 @@ html{
   color: #d35353;
 }
 .dropdown:hover .dropdown-menu {
-    display: block;
+    display: inline-block;
 }
 .toggle-menu {
   padding-left: 50px;
@@ -283,6 +283,16 @@ button[data-toggle="collapse"] {
   background: transparent;
   border: none;
   outline: none;
+}
+.main-menu .dropdown-link {
+  display: inline-block;
+} 
+.main-menu .nav-link.dropdown-link:hover {
+  color: #d35353;
+  box-shadow: none;
+}
+.main-menu .navbar-collapse .navbar-nav .nav-link.dropdown-link {
+  padding-left: 10px;
 }
 
 .header {
@@ -474,14 +484,24 @@ button[data-toggle="collapse"] {
   margin-bottom: 95px;
 }
 .card-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   position: relative;
   width: 280px;
-/*  height: 332px;*/
+  /* height: 332px; */
+  height: auto;
+}
+/*
+.card-item {
+  position: relative;
+  width: 280px;
   height: auto;
 }
 .card-item img {
   float: right;
 }
+*/
 .card-item .name {
   color: #353535;
   font-family: "Exo 2", Arial, sans-serif;
@@ -503,7 +523,7 @@ button[data-toggle="collapse"] {
 }
 .card-item .circle {
   position: absolute;
-  right: 10px;
+  right: 30px;
   width: 33px;
   height: 33px;
   color: #fff;
@@ -753,10 +773,13 @@ figure::after {
 .feature-card {
   margin-bottom: 100px;  
 }
+.feature-card .row {
+  justify-content: space-between;
+}
 .feature-card-item {
   position: relative;
-  min-height: 200px;
-  min-width: 270px;
+  height: 200px;
+  width: 270px;
   border: 1px solid #9c9c9c;
   cursor: pointer;
 }
@@ -879,7 +902,7 @@ figure::after {
 }
 .divider {
   min-height: 180px;
-  padding: 45px 0;
+  padding: 45px 20px;
   margin-bottom: 85px;
   color: #fff;
   background: url(img/divider.jpg) no-repeat;
@@ -1322,9 +1345,18 @@ input[type="email"] {
   .feature-card {
     padding: 0 10px;
   }
-  .feature-card-item {
-    min-width: 100%;
+  .feature-card .row {
+    justify-content: space-between;
   }
+  .feature-card .col-3 {
+    padding: 0;
+    max-width: 25%;
+  }
+/*
+  .feature-card-item {
+    width: 100%;
+  }
+*/
   .foto-catalog {
     display: none;
   }
@@ -1407,7 +1439,7 @@ input[type="email"] {
 /*------------------------------------------------------1055------------------------------*/
 @media only screen and (max-width: 1055px) {
   .top-menu {
-    padding-left: 120px;
+    padding-left: 260px;
   }
   .top-menu .navbar-nav {
     display: none;
@@ -1431,7 +1463,7 @@ input[type="email"] {
     margin-right: 10px;
   }
   .head .form-search {
-    width: 350px;
+    width: 100%;
     margin-right: 10px;
   }
   .head .col:nth-child(3) {
@@ -1507,8 +1539,44 @@ input[type="email"] {
   .main-menu li {
     padding-right: 30px;
   }
+/*
   .main-menu {
-    padding-left: 35px;
+    padding-left: 75px;
+  }
+*/
+}
+/*---------------------------------------------- 1040 ----------------------------*/
+@media only screen and (max-width: 1040px) {
+  .top-menu {
+    padding-left: 240px;
+  }
+}
+/*---------------------------------------------- 1025 ----------------------------*/
+@media only screen and (max-width: 1025px) {
+  .top-menu {
+    padding-left: 220px;
+  }
+}
+/*---------------------------------------------- 1010 ----------------------------*/
+@media only screen and (max-width: 1010px) {
+  .top-menu {
+    padding-left: 200px;
+  }
+  .head {
+    padding-left: 60px;
+  }
+  .main-menu {
+    padding-left: 60px;
+  }
+  
+}
+/*---------------------------------------------- 990 ----------------------------*/
+@media only screen and (max-width: 990px) {
+  .top-menu {
+    padding-left: 180px;
+  }
+  .head {
+    padding-left: 40px;
   }
 }
 /*------------------------ 981 ---------------*/
@@ -1519,21 +1587,15 @@ input[type="email"] {
 }
 /*--------------------------------------------965-------------------------------------*/
 @media only screen and (max-width: 965px) {
+  .top-menu {
+    padding-left: 160px;
+  }
+  .head {
+    padding-left: 20px;
+  }
   .txt-center {
     padding: 45px 10px;
   }
-/*
-  .model-item:hover .txt-center {
-    padding: 90px 10px;
-  }
-  .model-item:hover .model-text {
-    padding: 80px 10px;
-  }
-  .model-text {
-    padding: 25px 10px;
-    margin: -60px 0 0 -110px;
-  }
-*/
   .review .col-6 {
     max-width: 100%;
     flex: none;
@@ -1552,11 +1614,31 @@ input[type="email"] {
     height: 350px;
   }
 }
+/*---------------------------------------------- 950 ----------------------------*/
+@media only screen and (max-width: 950px) {
+  .top-menu {
+    padding-left: 140px;
+  }
+  .head .form-search {
+    width: 455px;
+  }
+}
+/*---------------------------------------------- 935 ----------------------------*/
+@media only screen and (max-width: 935px) {
+  .top-menu {
+    padding-left: 120px;
+  }
+  .head .form-search {
+    width: 430px;
+  }
+}
 /*------------------------------------------920------------------------------------*/
 @media only screen and (max-width: 920px) {
+/*
   .top-menu, .head, .main-menu {
     padding-left: 10px;
   }
+*/
   .header {
     min-height: 300px;
   }
@@ -1574,10 +1656,31 @@ input[type="email"] {
     height: 400px;
   }
 }
+/*---------------------------------------------- 910 ----------------------------*/
+@media only screen and (max-width: 910px) {
+  .top-menu {
+    padding-left: 100px;
+  }
+  .head .form-search {
+    width: 400px;
+  }
+}
+/*---------------------------------------------- 880 ----------------------------*/
+@media only screen and (max-width: 880px) {
+  .top-menu {
+    padding-left: 80px;
+  }
+  .head .form-search {
+    width: 370px;
+  }
+}
 /*----------------------------------850-----------------------------------*/
 @media only screen and (max-width: 850px) {
   .top-menu .select {
     display: none;
+  }
+  .top-menu {
+    padding-left: 60px;
   }
   .head {
     position: relative;
@@ -1594,6 +1697,7 @@ input[type="email"] {
     padding-left: 100px;
   }
   .head .col:nth-child(2) {
+    justify-content: center;
     max-width: 755px;
     position: absolute;
     top: 72px;
@@ -1601,13 +1705,14 @@ input[type="email"] {
   }
   .head .form-search {
     width: 100%;
-    padding-left: 110px;
+    justify-content: flex-end;
+/*    padding-left: 110px;*/
   }
   .form-search input[type="search"] {
     width: 90%;
   }
   .form-search button {
-    right: 75px;
+    right: 20px;
   }
   .head .col:nth-child(3) {
     max-width: 160px;
@@ -1629,6 +1734,51 @@ input[type="email"] {
     height: 76%;
   }
 }
+/*---------------------------------------------- 840 ----------------------------*/
+@media only screen and (max-width: 840px) {
+  .top-menu {
+    padding-left: 40px;
+  }
+}
+/*---------------------------------------------- 815 ----------------------------*/
+@media only screen and (max-width: 815px) {
+  .top-menu {
+    padding-left: 20px;
+  }
+}
+/*---------------------------------------------- 800 ----------------------------*/
+@media only screen and (max-width: 800px) {
+  .top-menu {
+    padding-left: 0;
+  }
+  .head .form-search {
+    padding-right: 20px;
+  }
+  .form-search button {
+    right: 40px;
+  }
+}
+/*---------------------------------------------- 780 ----------------------------*/
+@media only screen and (max-width: 780px) {
+  .top-menu small {
+    padding-right: 20px;
+  }
+  .top-menu .status-link {
+    padding-right: 20px;
+  }
+  .head .form-search {
+    padding-right: 40px;
+  }
+  .form-search button {
+    right: 60px;
+  }
+  .head .logo {
+    padding-left: 80px;
+  }
+  .head .col:first-child {
+    max-width: 430px;
+  }
+}
 /*------------------------------------- 768 -------------------------------------------*/
 @media only screen and (max-width: 768px) {
   .container {
@@ -1639,6 +1789,12 @@ input[type="email"] {
   }
   .top-menu {
     width: 750px;
+  }
+  .top-menu small {
+    padding-right: 10px;
+  }
+  .top-menu .status-link {
+    padding-right: 10px;
   }
 /*  .top-menu .navbar-nav {*/
 /*    display: none;*/
@@ -1683,19 +1839,11 @@ input[type="email"] {
     max-width: 50%;
 /*    justify-content: space-between;*/
   }
-/*
-  .feature-card .col-3:nth-child(odd) {
-    margin-left: 90px;
-  }
-*/
+
   .feature-card .col-3:first-child {
     margin-bottom: 30px;
   }
-/*
-  .feature-card-item {
-    width: 270px;
-  }
-*/
+
   .foto-catalog {
     display: none;
   }
@@ -1831,17 +1979,30 @@ input[type="email"] {
   .actual-cards .card-item:nth-child(4n-1) {
     display: none;
   }
+  .head .form-search {
+    padding: 0;
+    justify-content: center;
+  }
+  .divider {
+    display: none;
+  }
 }
 /*------------------------------------- 720------------------------------------*/
 @media only screen and (max-width: 720px) {
   .top-menu {
-    padding-left: 100px;
+    padding-left: 130px;
   }
   .top-menu .status-link {
     display: none;
   }
   .top-footer {
     height: 1030px;
+  }
+  .head .col:first-child {
+    max-width: 400px;
+  }
+  .head .logo {
+    padding-left: 60px;
   }
   .footer-item {
     float: none;
@@ -1862,20 +2023,25 @@ input[type="email"] {
     padding-left: 30px;
   }
 }
+/*------------------------------------- 700------------------------------------*/
+@media only screen and (max-width: 700px) {
+  .top-menu {
+    padding-left: 100px;
+  }
+}
 /*----------------------------------------- 680 -------------------------*/
 @media only screen and (max-width: 680px) {
-  .top-menu {
-    padding-left: 50px;
-  }
   .head .logo {
     padding-left: 50px;
   }
   .head .col:first-child {
     max-width: 380px;
   }
+/*
   .head .form-search {
     padding-left: 50px;
   }
+*/
   .header {
     background-position: 70% 50%;
   }
@@ -1885,37 +2051,45 @@ input[type="email"] {
   }
 */
 }
+/*------------------------------------- 670------------------------------------*/
+@media only screen and (max-width: 670px) {
+  .top-menu {
+    padding-left: 80px;
+  }
+}
+/*------------------------------------- 650------------------------------------*/
+@media only screen and (max-width: 650px) {
+  .top-menu {
+    padding-left: 60px;
+  }
+  .head .logo {
+    padding-left: 30px;
+  }
+}
 /*----------------------------------------- 630 -----------------------------------------------*/
 @media only screen and (max-width: 630px) {
   .top-menu {
-    padding-left: 5px;
-  }
-  .head .logo {
-    padding-left: 5px;
+    padding-left: 40px;
   }
   .head .col:first-child {
-    max-width: 340px;
-  }
-  .head .form-search {
-    padding-left: 5px;
+    max-width: 355px;
   }
   .header {
     min-height: 200px;
     background-position: 75% 50%;
   }
-/*
-  .feature-card .col-3:nth-child(2n+1) {
-    margin-left: 10px;
+}
+/*----------------------------------------- 610 -----------------------------------------------*/
+@media only screen and (max-width: 610px) {
+  .top-menu {
+    padding-left: 20px;
   }
-*/
+  .head .col:first-child {
+    max-width: 330px;
+  }
 }
 /*--------------------------------------- 600 ----------------------------------------*/
 @media only screen and (max-width: 600px) {
-/*
-  .feature-card .col-3:nth-child(2n+1) {
-    margin-left: 0;
-  }
-*/
   .feature-card .col-3 {
     min-width: 50%;
     margin-bottom: 30px;
@@ -1928,6 +2102,15 @@ input[type="email"] {
   }
   .news {
     display: none;
+  }
+}
+/*----------------------------------------- 590 -----------------------------------------------*/
+@media only screen and (max-width: 590px) {
+  .top-menu {
+    padding-left: 0;
+  }
+  .head .col:first-child {
+    max-width: 310px;
   }
 }
 /*--------------------------------- 580 -------------------------------------*/
@@ -1947,11 +2130,6 @@ input[type="email"] {
   .feature-card .col-3 {
     min-width: 55%;
   }
-/*
-  .feature-card-item {
-    margin-left: 120px;
-  }
-*/
   .divider {
     display: none;
   }
@@ -1976,16 +2154,31 @@ input[type="email"] {
     display: none;
   }
 }
+/*----------------------------------------- 560 -----------------------------------------------*/
+@media only screen and (max-width: 560px) {
+  .head .col:nth-child(3) {
+    max-width: 140px;
+  }
+}
+/*----------------------------------------- 540 -----------------------------------------------*/
+@media only screen and (max-width: 540px) {
+  .head .col:nth-child(3) {
+    max-width: 120px;
+  }
+}
 /*---------------------------- 530 ------------------------*/
 @media only screen and (max-width: 530px) {
   figure::after {
     width: 69%;
   }
   .head .col:first-child {
-    max-width: 270px;
+    max-width: 280px;
   }
   .head .col:nth-child(3) {
     max-width: 130px;
+  }
+  .head .logo {
+    padding-left: 15px;
   }
   .actual-cards .card-item:nth-child(3n-1) {
     display: none;
@@ -2006,6 +2199,17 @@ input[type="email"] {
     display: none;
   }
 }
+/*---------------------------- 500 ------------------------*/
+@media only screen and (max-width: 500px) {
+  .head .col:first-child {
+    max-width: 270px;
+  }
+  .head .col:nth-child(3) {
+    max-width: 120px;
+  }
+  .head .logo {
+    padding-left: 10px;
+  }
 /*------------------------------- 475 ------------------------------------*/
 @media only screen and (max-width: 475px) {
   .videoreview-item {
@@ -2024,27 +2228,27 @@ input[type="email"] {
   }
   .head .logo {
     padding: 20px 0;
-    padding-left: 20px;
+    padding-left: 30px;
     margin-right: 0;
     text-align: left;
   }
   .head .col:first-child {
     display: block;
-    max-width: 2555px;
+    max-width: 280px;
     padding-left: 0;
   }  
   .head .col:nth-child(2) {
     max-width: 100%;
     position: absolute;
     top: 85px;
-    left: 10px;
+/*    left: 10px;*/
   }
   .head .col:nth-child(3) {
     max-width: 63px;
     padding-left: 0;
   }
   .head .col:last-child {
-    max-width: 170px;
+    max-width: 125px;
   }
   .form-search button {
     bottom: 0;
@@ -2092,6 +2296,12 @@ input[type="email"] {
     min-height: 150px;
   }
 }
+/*---------------------------391-------------------------*/
+@media only screen and (max-width: 391px)  {
+  .head .logo {
+    padding-left: 15px;
+  }
+}
 /*---------------------------380-------------------------*/
 @media only screen and (max-width: 380px) {
   header {
@@ -2099,6 +2309,7 @@ input[type="email"] {
   }
   .head {
     border: none;
+    padding: 0;
   }
   .head .row {
     min-width: 380px;
@@ -2112,14 +2323,14 @@ input[type="email"] {
   .head .col:first-child {
     display: block;
     flex: none;
-    max-width: 380px;
+    max-width: 395px;
     padding-left: 0;
   }  
   .head .col:nth-child(2) {
     max-width: 100%;
     position: absolute;
     top: 104px;
-    left: 10px;
+/*    left: 10px;*/
   }
   .head .col:nth-child(3) {
     max-width: 70px;
@@ -2129,6 +2340,7 @@ input[type="email"] {
     max-width: 115px;
   }
   .form-search button {
+    right: 40px;
     bottom: 0;
   }
   .wish-list,
@@ -2180,9 +2392,6 @@ input[type="email"] {
 }
 /*---------------------------------- 320 -------------------------------------------*/
 @media only screen and (max-width: 320px) {
-  body {
-    overflow-x: hidden;
-  }
   .container {
     max-width: 300px;
   }
@@ -2253,7 +2462,7 @@ input[type="email"] {
   }
   .card-item img {
     float: none;
-    margin-left: 32px;
+/*    margin-left: 32px;*/
   }
   .card-item .circle {
     right: 35px;
