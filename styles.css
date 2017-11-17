@@ -1,6 +1,7 @@
 .container {
   max-width: 1170px;
   padding: 0;
+/*  overflow: hidden;*/
 }
 header .container {
   padding: 0 15px;
@@ -15,13 +16,14 @@ html{
     width: 100%;
     max-width: 100%;
     overflow-x: hidden;
+    margin-right: -10px;
 }
 
   body
   {
     width: 100%;
     max-width: 100%;
-    overflow-x: hidden;
+/*    overflow: hidden;*/
   }
 .top-menu {
   height: 40px;
@@ -136,6 +138,7 @@ html{
 .head .col {
   padding-left: 0;
   padding-right: 0;
+  padding-bottom: 20px;
 }
 .head .logo {
   height: 40px;
@@ -471,7 +474,7 @@ button[data-toggle="collapse"] {
   z-index: 1;
 }
 .view-all {
-  margin-top: 125px;
+  margin-top: 60px;
 }
 .view-all a {
   color: #d35353;
@@ -698,6 +701,7 @@ button[data-toggle="collapse"] {
   margin-top: 5px;
   margin-bottom: 10px;
 }
+/*
 .size span {
   display: inline-block;
   margin-right: 10px;
@@ -706,13 +710,9 @@ button[data-toggle="collapse"] {
   height: 25px;
 }
 .size .text-bordered {
-/*  display: inline-block;*/
-/*
-  width: 25px;
-  height: 25px;
-*/
   outline: 1px solid #ccc;
 }
+*/
 
 .card-item:hover .card-hover-item {
   display: flex;
@@ -743,14 +743,17 @@ figure::after {
   display: none;
   position: absolute;
   top: 0;
-  left: 15px;
-  width: 93%;
-  height: 83%;
+  left: 0;
+  width: 100%;
+  height: 87%;
   background-color: rgba(211, 83, 83, 0.8);
   background-image: url(img/play-button.png);
   background-repeat: no-repeat;
   background-position: 50% 50%;
   cursor: pointer;
+}
+.videoreview-item figure {
+  position: relative;
 }
 /*
 .red-background {
@@ -990,11 +993,17 @@ input[type="email"] {
 .review .view-all {
   margin-top: 48px;
 }
+.review-item {
+  padding-left: 80px;
+}
 .review-item img {
   width: 127px;
   height: 191px;
+  margin-right: 30px;
+/*
   margin-left: 87px;
   margin-right: 30px;
+*/
   border: 5px solid #efefef;
 }
 .review-item .rewiew-right{
@@ -1049,10 +1058,23 @@ input[type="email"] {
   display: none;
 }
 
-
 .videoreview {
   margin-bottom: 90px;
+  display: block;
+  text-align: center;
 }
+.videoreview-item {
+  display: inline-block;
+  padding-right: 15px;
+  margin-bottom: 22px;
+}
+videoreview-wrapper {
+  display: inline-block;
+}
+div.videoreview-item:last-of-type {
+  padding-right: 0;
+}
+
 .videoreview .big-heading {
    margin-bottom: 63px; 
 }
@@ -1362,13 +1384,17 @@ input[type="email"] {
   .foto-catalog {
     display: none;
   }
+/*
   .videoreview {
     padding: 0 10px;
   }
+*/
+/*
   .red-background {
     min-width: 92%;
     min-height: 85%;
   }
+*/
   .news {
     padding: 0 10px;
   }
@@ -1405,10 +1431,19 @@ input[type="email"] {
     width: 60%;
   }
 }
+/*---------------------------1168-----------------*/
+@media only screen and (max-width: 1168px) {
+div.videoreview-item:last-of-type {
+    display: none;
+  }
+}
 /*---------------------------1130-----------------*/
 @media only screen and (max-width: 1130px) {
 .main-menu li {
     padding-right: 50px;
+  }
+  .feature-card-item:nth-child(even) {
+    margin-right: 0;
   }
 }
 /*------------------------------------------- 1105 --------------------------------------*/
@@ -1738,6 +1773,32 @@ input[type="email"] {
     width: 90%;
     height: 76%;
   }
+  
+  .top-footer {
+    height: 475px;
+  }
+  .top-footer .container {
+    display: block;
+  }
+  .footer-item {
+    float: left;
+  }
+  .info {
+    width: 240px;
+    margin-right: 65px;
+  }
+  .main {
+    width: 181px;
+    margin-right: 55px;
+    padding-left: 0;
+  }
+  .help {
+    width: 190px;
+    margin-right: 0;
+  }
+  .custumers {
+    margin-right: 85px;
+  }
 }
 /*---------------------------------------------- 840 ----------------------------*/
 @media only screen and (max-width: 840px) {
@@ -1848,29 +1909,12 @@ input[type="email"] {
   .feature-card .col-3:first-child {
     margin-bottom: 30px;
   }
-
+  .view-all {
+    margin-top: 40px;
+  }
   .foto-catalog {
     display: none;
   }
-/*
-  .divider-col {
-    padding: 0;
-  }
-*/
-/*
-  .col-social {
-    padding-left: 10px;
-  }
-  .col-subscribe {
-    padding-right: 10px;
-  }
-  .form-sub {
-    width: 100%;
-  }
-  input[type="email"] {
-    width: 100%;
-  }
-*/
   .review .col-6 {
     max-width: 100%;
     flex: none;
@@ -1904,25 +1948,6 @@ input[type="email"] {
     width: 92%;
     height: 81%;
   }
-/*
-  .news .col-6 {
-    max-width: 100%;
-    flex: none;
-  }
-  .news .col-6:last-child {
-    display: none;
-  }
-  .news-item {
-    margin: 0 auto;
-    width: 570px;
-  }
-  .news .row {
-    display: none;
-  }
-  #carouselNewsControls {
-    display: block;
-  }
-*/
   
   .grey-background {
     display: none;
@@ -1946,6 +1971,7 @@ input[type="email"] {
     width: 100%;
     padding: 0px 5px;
   }
+/*
   .top-footer {
     height: 475px;
   }
@@ -1971,6 +1997,7 @@ input[type="email"] {
   .custumers {
     margin-right: 85px;
   }
+*/
 }
 /*---------------------------------------- 755 ----------------------------------------------*/
 @media only screen and (max-width: 755px) {
@@ -2134,9 +2161,11 @@ input[type="email"] {
   .head .col:first-child {
     max-width: 300px;
   }
+/*
   .form-search button {
-    bottom: 0;
+    bottom: 7px;
   }
+*/
   .actual, .video-review {
     margin-bottom: 70px;
   }
@@ -2152,9 +2181,11 @@ input[type="email"] {
   .videoreview .col-4 {
     max-width: 100%;
   }
+/*
   .videoreview-item {
     margin-left: 90px;
   }
+*/
   figure::after {
     left: 105px;
     width: 63%;
@@ -2167,6 +2198,13 @@ input[type="email"] {
     display: none;
   }
 }
+/*----------------------------------------- 575 -----------------------------------------------*/
+@media only screen and (max-width: 575px) {
+  .form-search button {
+    bottom: 0;
+  }
+}
+
 /*----------------------------------------- 560 -----------------------------------------------*/
 @media only screen and (max-width: 560px) {
   .head .col:nth-child(3) {
@@ -2177,6 +2215,9 @@ input[type="email"] {
 @media only screen and (max-width: 540px) {
   .head .col:nth-child(3) {
     max-width: 120px;
+  }
+  .feature-card-item:nth-child(odd) {
+    margin-right: 0;
   }
 }
 /*---------------------------- 530 ------------------------*/
@@ -2225,9 +2266,11 @@ input[type="email"] {
   }
 /*------------------------------- 475 ------------------------------------*/
 @media only screen and (max-width: 475px) {
+/*
   .videoreview-item {
     margin-left: 40px;
   }
+*/
   figure::after {
     left: 55px;
     width: 77%;
@@ -2286,6 +2329,9 @@ input[type="email"] {
     padding-left: 0;
     margin-right: 0;
   }
+  button[data-toggle="collapse"] {
+    margin: 0;
+  }
   .header {
     min-height: 155px;
     background-position: 71% 50%;
@@ -2303,12 +2349,18 @@ input[type="email"] {
     width: 86%;
   }
   .videoreview-item {
-    margin-left: 10px;
+    padding-right: 0;
   }
   .header {
     min-height: 150px;
   }
 }
+/*--------------------------- 400 -------------------------*/
+@media only screen and (max-width: 400px)  {
+  .head .logo {
+    padding-left: 20px;
+  }
+}  
 /*---------------------------391-------------------------*/
 @media only screen and (max-width: 391px)  {
   .head .logo {
@@ -2396,8 +2448,11 @@ input[type="email"] {
     width: 91%;
     height: 82%;
   }
-  .videoreview-item {
-    margin-left: 5px;
+  .videoreview-item img{
+/*    margin-left: 5px;*/
+    width: 300px;
+    height: 200px;
+    
   }
   .last {
     display: none;
