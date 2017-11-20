@@ -1,7 +1,6 @@
 .container {
   max-width: 1170px;
   padding: 0;
-/*  overflow: hidden;*/
 }
 header .container {
   padding: 0 15px;
@@ -16,14 +15,13 @@ html{
     width: 100%;
     max-width: 100%;
     overflow-x: hidden;
-    margin-right: -10px;
 }
 
   body
   {
     width: 100%;
     max-width: 100%;
-/*    overflow: hidden;*/
+    overflow-x: hidden;
   }
 .top-menu {
   height: 40px;
@@ -562,6 +560,7 @@ button[data-toggle="collapse"] {
   top: 0;
   right: 0;
   width: 280px;
+  padding-bottom: 8px;
 /*  height: 450px;*/
   height: auto;
 }
@@ -601,7 +600,6 @@ button[data-toggle="collapse"] {
     margin-top: 50px;
     margin-left: 20px;
     position: relative;
-
     width: 90px;
     height: 700px;
 */
@@ -659,7 +657,7 @@ button[data-toggle="collapse"] {
 }
 
 .jcarousel-control-next {
-    bottom: 25px;
+    bottom: 5px;
 }
 
 .jcarousel-control-prev:hover span,
@@ -993,13 +991,27 @@ input[type="email"] {
 .review .view-all {
   margin-top: 48px;
 }
+.review-wrapper {
+  display: block;
+  text-align: center;
+}
 .review-item {
-  padding-left: 80px;
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 10px;
+/*  padding-left: 80px;*/
+}
+.review-desc {
+  text-align: left;
+  padding-left: 20px;
+  width: 330px;
+  display: inline-block;
+  vertical-align: top;
 }
 .review-item img {
   width: 127px;
   height: 191px;
-  margin-right: 30px;
+/*  margin-right: 30px;*/
 /*
   margin-left: 87px;
   margin-right: 30px;
@@ -1044,16 +1056,18 @@ input[type="email"] {
 .review-text .quote {
   position: absolute;
   top: 15px;
-  left: 215px;
+  left: -25px;
   opacity: 0.16;
   color: #000;
   font-size: 72px;
   font-weight: 300;
   font-style: italic;
 }
+/*
 .right-text .quote {
   left: 198px;
 }
+*/
 #carouselReviewControls {
   display: none;
 }
@@ -1068,7 +1082,7 @@ input[type="email"] {
   padding-right: 15px;
   margin-bottom: 22px;
 }
-videoreview-wrapper {
+.videoreview-wrapper {
   display: inline-block;
 }
 div.videoreview-item:last-of-type {
