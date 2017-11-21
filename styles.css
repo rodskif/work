@@ -1351,9 +1351,16 @@ div.videoreview-item:last-of-type {
   font-weight: 400;
   line-height: 50px;
 }
-
-
-
+/*------------------------------------------------------------ more then 1500----------------------------------------*/
+@media only screen and (min-width: 1500px) {
+.last .grey-background {
+  min-width: 40%;
+/*------------------------------------------------------------ more then 1400----------------------------------------*/
+/*
+@media only screen and (min-width: 1400px) {
+.last .grey-background {
+  min-width: 42%;
+*/
 /*------------------------------------------------------------1245----------------------------------------*/
 @media only screen and (max-width: 1245px) {
   .actual-cards .card-item:last-child {
@@ -2396,56 +2403,69 @@ div.videoreview-item:last-of-type {
   }
   .head {
     border: none;
+    padding: 0;
   }
   .head .row {
-    min-width: 320px;
+    min-width: 380px;
     justify-content: flex-end;
   }
   .head .logo {
     padding: 20px 0;
-    padding-left: 30px;
     margin-right: 0;
-    text-align: left;
+    text-align: center;
   }
   .head .col:first-child {
     display: block;
-    max-width: 280px;
+    flex: none;
+    max-width: 100%;
     padding-left: 0;
+    margin-bottom: 5px;
   }  
   .head .col:nth-child(2) {
     max-width: 100%;
     position: absolute;
-    top: 85px;
+    top: 104px;
 /*    left: 10px;*/
   }
   .head .col:nth-child(3) {
-    max-width: 63px;
-    padding-left: 0;
+    max-width: 75px;
+/*    padding-left: 15px;*/
   }
   .head .col:last-child {
-    max-width: 125px;
+    max-width: 115px;
+    flex: none;
   }
   .form-search button {
+    right: 40px;
     bottom: 0;
   }
   .head .wish-list {
     width: 60px;
   }
+  .head .wish-list,
+  .head .cart {
+    height: 40px;
+  }
   .wish-list,
   .cart {
-    margin-top: 0;
+    margin-top: 10px;
+  }
+  .head .cart .cart-count {
+    top: 0;
   }
   .wish-list p,
   .cart p {
     display: none;
   }
+  
   .main-menu {
     position: relative;
-    top: -95px;
-    left: 0;
+    top: -85px;
+    left: -20px;
   }
   .main-menu .navbar-collapse {
     top: 45px;
+    left: 20px;
   }
   .toggle-menu {
     padding-left: 0;
@@ -2480,13 +2500,13 @@ div.videoreview-item:last-of-type {
 /*--------------------------- 400 -------------------------*/
 @media only screen and (max-width: 400px)  {
   .head .logo {
-    padding-left: 20px;
+/*    padding-left: 20px;*/
   }
 }  
 /*---------------------------391-------------------------*/
 @media only screen and (max-width: 391px)  {
   .head .logo {
-    padding-left: 15px;
+/*    padding-left: 15px;*/
   }
 }
 /*---------------------------380-------------------------*/
