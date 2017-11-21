@@ -68,11 +68,12 @@ $(".jcarousel li").on("mouseenter", "a", function () {
 //});
 
 //--------------------------- change size ----------------------------
-$(".size").on("click", "span", function () {
-  $(".text-bordered").removeClass("text-bordered");
-  $(this).addClass("text-bordered");
-//  $(this).css("border", "1px solid #ccc");
-})
+
+//$(".size").on("click", "span", function () {
+//  $(".text-bordered").removeClass("text-bordered");
+//  $(this).addClass("text-bordered");
+////  $(this).css("border", "1px solid #ccc");
+//})
 
 //------------------------------------------ Up button ----------------------
 function up() {  
