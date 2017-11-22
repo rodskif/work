@@ -21,7 +21,7 @@ html{
   {
     width: 100%;
     max-width: 100%;
-    overflow-x: hidden;
+    overflow: hidden;
   }
 .top-menu {
   height: 40px;
@@ -1199,7 +1199,7 @@ div.videoreview-item:last-of-type {
   position: absolute;
   top: -40px;
   left: 0;
-  min-width: 38%;
+  min-width: 40%;
   min-height: 115%;
   background-color: #f6f6f6;
   z-index: -5;
@@ -1351,16 +1351,7 @@ div.videoreview-item:last-of-type {
   font-weight: 400;
   line-height: 50px;
 }
-/*------------------------------------------------------------ more then 1500----------------------------------------*/
-@media only screen and (min-width: 1500px) {
-.last .grey-background {
-  min-width: 40%;
-/*------------------------------------------------------------ more then 1400----------------------------------------*/
-/*
-@media only screen and (min-width: 1400px) {
-.last .grey-background {
-  min-width: 42%;
-*/
+
 /*------------------------------------------------------------1245----------------------------------------*/
 @media only screen and (max-width: 1245px) {
   .actual-cards .card-item:last-child {
@@ -1369,6 +1360,9 @@ div.videoreview-item:last-of-type {
   .header {
     min-height: 470px;
     background-position: 73% 50%;
+  }
+  .last .grey-background {
+    min-width: 38%;
   }
 }
 /*--------------------------------- 1195 ------------------------*/
