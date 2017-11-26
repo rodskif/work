@@ -631,7 +631,7 @@ button[data-toggle="collapse"] {
   /*the same as card galery*/
   padding: 25px 10px;
   width: 70px;
-  height: 376px;
+  height: 420px;
 /*
     float: left;
     margin-top: 50px;
@@ -648,7 +648,7 @@ button[data-toggle="collapse"] {
     position: relative;
     overflow: hidden;
     width: 42px;
-    height: 376px;
+    height: 382px;
 }
 
 .jcarousel img {
@@ -891,27 +891,130 @@ figure::after {
   position: relative;
   float: left;
   box-sizing: border-box;
-  outline: 3px solid #fff;
-  outline-offset: -30px;
-  cursor: pointer;
+  overflow: hidden;
 }
-/*
-.catalog-img:hover {
+
+.catalog-img img {
+  transition: all 0.7s;
+}
+.catalog-img:hover img {
   transform: scale(1.1);
-  filter: grayscale(0.5);
 }
-*/
+.catalog-img:hover::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.t, .r, .b, .l {
+  position: absolute;
+  z-index: 8;
+}
+.t {
+  top: 30px;
+  left: 30px;
+  border-top: 3px solid #fff;
+}
+.r {
+  top: 30px;
+  right: 33px;
+  border-right: 3px solid #fff;
+}
+.b {
+  bottom: 33px;
+  right: 33px;
+  border-bottom: 3px solid #fff;
+}
+.l {
+  top: 30px;
+  left: 30px;
+  border-left: 3px solid #fff;
+}
+/*------------------------------ one photo ------------*/
 .img1 {
   width: 580px;
   height: 500px;
-  overflow: hidden;
 }
-.img1 img:hover {
-  transform: scale(1.1);
-  outline: 3px solid #fff;
-  outline-offset: -50px;
+.img1 .t,
+.img2 .t,
+.img3 .t,
+.img4 .t {
+  width: 89%;
 }
-
+.img1 .r {
+  height: 87%;
+}
+.img1 .b {
+  width: 60%;
+}
+.img1 .l {
+  height: 80%;
+}
+/*----------------------------- end ---------------------------*/
+/*------------------------------ two photo ------------*/
+.img2, 
+.img3 {
+  width: 580px;
+  height: 245px;
+}
+.img2 .r,
+.img3 .r,
+.img4 .r,
+.img5 .r,
+.img6 .r {
+  height: 74%;
+}
+.img2 .b {
+  width: 67%;
+}
+.img2 .l,
+.img3 .l,
+.img4 .l {
+  height: 62%;
+}
+/*----------------------------- end ---------------------------*/
+/*------------------------------ three photo ------------*/
+.img3 .b {
+  width: 47%;
+}
+/*----------------------------- end ---------------------------*/
+/*------------------------------ four photo ------------*/
+.img4 {
+  width: 580px;
+  height: 250px;
+}
+.img4 .b {
+  width: 36%;
+}
+/*----------------------------- end ---------------------------*/
+/*------------------------------ five photo ------------*/
+.img5, .img6 {
+  width: 285px;
+  height: 250px;
+}
+.img5 .t,
+.img6 .t {
+  width: 78%;
+}
+.img5 .b {
+  width: 15%;
+}
+.img5 .l {
+  height: 47%;
+}
+/*----------------------------- end ---------------------------*/
+/*------------------------------ six photo ------------*/
+.img6 .b {
+  width: 10%;
+}
+.img6 .l {
+  height: 65%;
+}
+/*----------------------------- end ---------------------------*/
 .img1, .img4, .img5 {
   margin-right: 10px;
 }
@@ -921,8 +1024,8 @@ figure::after {
 
 .catalog-text-block {
   position: absolute;
-  bottom: 0;
-  left: 0;
+  bottom: -8px;
+  left: 4px;
   width: auto;
   max-height: 100px;
   padding: 18px;
@@ -932,31 +1035,20 @@ figure::after {
   font-weight: 400;
   line-height: 22px;
   text-transform: uppercase;
-  background-position:  0% 100%; 
-  z-index: 99;
-/*   outline: 2px solid red; */
-}
-.block1 {
-  background-image: url("img/foto1.jpg");
-}
-.block2 {
-  background-image: url("img/foto2.jpg");
-}
-.block3 {
-  background-image: url("img/foto3.jpg");
+  z-index: 8;
 }
 .block4 {
-  background-image: url("img/foto4.jpg");
+/*  background-image: url("img/foto4.jpg");*/
   font-size: 30px;
 }
 .block5 {
-  background-image: url("img/foto5.jpg");
+/*  background-image: url("img/foto5.jpg");*/
   width: 210px;
   font-size: 20px;
   line-height: 24px;
 }
 .block6 {
-  background-image: url("img/foto6.jpg");
+/*  background-image: url("img/foto6.jpg");*/
   font-size: 20px;
   line-height: 24px;
 }
@@ -1230,8 +1322,27 @@ div.videoreview-item:last-of-type {
   
 .last {
   position: relative;
-  padding-bottom: 80px;
+/*  padding-bottom: 80px;*/
+  background-color: #f6f6f6;
+  z-index: -2;
 }
+.last .container {
+  padding: 0;
+}
+.bg {
+  position: absolute;
+  right: 0;
+/*   outline: 2px solid #000; */
+  width: 60%;
+  min-height: 100%;
+  background-color: #fff;
+  z-index: -1;
+}
+.last-wrapper {
+  width: 100%;
+  display: inline-block;
+}
+/*
 .last .grey-background {
   position: absolute;
   top: -40px;
@@ -1241,13 +1352,28 @@ div.videoreview-item:last-of-type {
   background-color: #f6f6f6;
   z-index: -5;
 }
+*/
 .last-col-left {
-  padding-left: 15px;
-  width: 410px;
+  display: inline-block;
+/*   padding-left: 15px; */
+  padding-top: 50px;
+  padding-right: 20px;
+  padding-left: 10px;
+  padding-bottom: 160px;
+/*  width: 428px;*/
+  width: 38%;
+  vertical-align: top;
+  background-color: #f6f6f6;
 }
 .last-col-right {
-  padding-left: 75px;
-  width: 710px;
+  display: inline-block;
+  padding-top: 50px;
+  padding-left: 25px;
+  padding-bottom: 140px;
+/*  width: 687px;*/
+  width: 61%;
+  vertical-align: top;
+  background-color: #fff;
 }
 .last-item {
   color: #353535;
@@ -1255,16 +1381,21 @@ div.videoreview-item:last-of-type {
   font-size: 14px;
   line-height: 22px;
   font-weight: 400;
+  width: 100%;
 }
 .last-item p {
   margin-bottom: 21px;
 }
+/*
 .last-item-left {
   width: 400px; 
 }
+*/
+/*
 .last-item-right {
   width: 700px; 
 }
+*/
 .last-item .last-caption {
   font-weight: 700;
   text-transform: uppercase;
@@ -1285,18 +1416,25 @@ div.videoreview-item:last-of-type {
   margin-bottom: 21px;
 }
 
-
+footer {
+  position: relative;
+}
 .top-footer {
   height: 292px;
   background-color: #353535;
+  color: #fff;
 }
 .stock {
+  position: absolute;
+  top: -44px;
+  left: 50%;
+  margin-left: -135px;
   height: 44px;
   width: 273px;
-  margin: 0 auto;
+/*  margin: 0 auto;*/
   background-image: url(img/stock.png);
-  background-repeat: no-repeat;
-  background-position: 0 50%;
+/*  background-repeat: no-repeat;*/
+/*  background-position: 0 50%;*/
   text-align: center;
 }
 .chevron {
@@ -1304,10 +1442,6 @@ div.videoreview-item:last-of-type {
   padding-top: 10px;
 }
 
-
-.top-footer {
-  color: #fff;
-}
 .top-footer .container {
   display: -webkit-flex;
   display: -moz-flex;
@@ -1396,12 +1530,14 @@ div.videoreview-item:last-of-type {
     display: none;
   }
   .header {
-    min-height: 470px;
+/*    min-height: 470px;*/
     background-position: 73% 50%;
   }
-  .last .grey-background {
-    min-width: 38%;
+/*
+  .bg {
+    width: 63%;
   }
+*/
   .actual-cards {
     padding: 0 30px;
   }
@@ -1412,7 +1548,7 @@ div.videoreview-item:last-of-type {
 /*--------------------------------- 1195 ------------------------*/
 @media only screen and (max-width: 1195px) {
   .header {
-    min-height: 460px;
+/*    min-height: 460px;*/
   }
 }
 /*---------------------------------------1170----------------------------------------------*/
@@ -1440,7 +1576,7 @@ div.videoreview-item:last-of-type {
     padding-right: 55px;
   }
   .header {
-    min-height: 410px;
+/*    min-height: 410px;*/
     background-position: 75% 50%;
   }
   .models {
@@ -1521,6 +1657,7 @@ div.videoreview-item:last-of-type {
     margin-bottom: 5px;
   }
 */
+/*
   .last {
     padding-left: 10px;
   }
@@ -1531,6 +1668,7 @@ div.videoreview-item:last-of-type {
     padding-left: 50px;
     width: 60%;
   }
+*/
 }
 /*---------------------------1168-----------------*/
 @media only screen and (max-width: 1168px) {
@@ -1579,6 +1717,12 @@ div.videoreview-item:last-of-type {
   .card-hover-item {
     right: 25px;
   }
+/*
+  .bg {
+    width: 62%;
+  }
+*/
+  
 }
 /*------------------------------------------- 1105 --------------------------------------*/
 @media only screen and (max-width: 1105px) {
@@ -1610,6 +1754,17 @@ div.videoreview-item:last-of-type {
   }
   .feature-text {
     text-align: center;
+  }
+*/
+/*
+  .last-col-left {
+    width: 35%;
+  }
+  .last-col-right {
+    width: 58%;
+  }
+  .bg {
+    width: 64%;
   }
 */
 }
@@ -1656,7 +1811,7 @@ div.videoreview-item:last-of-type {
     padding-right: 35px;
   }
   .header {
-    min-height: 350px;
+/*    min-height: 350px;*/
     margin-bottom: 90px;
   }
   .model-text {
@@ -1845,7 +2000,7 @@ div.videoreview-item:last-of-type {
   }
 */
   .header {
-    min-height: 300px;
+/*    min-height: 300px;*/
   }
   .feature-card-item p {
     margin-top: 0;
@@ -2161,7 +2316,16 @@ div.videoreview-item:last-of-type {
   }
 */
   
+/*
   .grey-background {
+    display: none;
+  }
+*/
+  .last {
+    padding-bottom: 80px;
+    background-color: #fff;
+  }
+  .bg {
     display: none;
   }
   .last-chapter {
@@ -2170,6 +2334,7 @@ div.videoreview-item:last-of-type {
   .last-col-left {
     padding: 0 10px;
     width: 100%;
+    background-color: #fff;
   }
   .last-item {
     width: 100%;
@@ -2217,7 +2382,7 @@ div.videoreview-item:last-of-type {
     padding-left: 0;
   }
   .header {
-    min-height: 250px;
+/*    min-height: 250px;*/
     background-position: 85% 50%;
   }
 /*
@@ -2324,7 +2489,7 @@ div.videoreview-item:last-of-type {
     max-width: 355px;
   }
   .header {
-    min-height: 200px;
+/*    min-height: 200px;*/
     background-position: 75% 50%;
   }
 }
@@ -2524,7 +2689,7 @@ div.videoreview-item:last-of-type {
   }
 */
   .header {
-    min-height: 180px;
+/*    min-height: 180px;*/
   }
 }
 /*---------------------------- 500 ------------------------*/
@@ -2625,7 +2790,7 @@ div.videoreview-item:last-of-type {
     margin: 0;
   }
   .header {
-    min-height: 155px;
+/*    min-height: 155px;*/
     background-position: 71% 50%;
   }
 }
@@ -2646,7 +2811,7 @@ div.videoreview-item:last-of-type {
     padding-right: 0;
   }
   .header {
-    min-height: 150px;
+/*    min-height: 150px;*/
   }
 }
 /*--------------------------- 400 -------------------------*/
@@ -2664,7 +2829,7 @@ div.videoreview-item:last-of-type {
 /*---------------------------380-------------------------*/
 @media only screen and (max-width: 380px) {
   header {
-    min-height: 200px;
+/*    min-height: 200px;*/
   }
   .head {
     border: none;
@@ -2828,10 +2993,16 @@ div.videoreview-item:last-of-type {
     padding-left: 0;
     margin-right: 0;
   }
+/*
   .header {
     background: url("img/banner-small.jpg") no-repeat;
     margin-bottom: 70px;
     min-height: 300px;
+  }
+*/
+  .header {
+    min-height: 0;
+    margin-bottom: 50px;
   }
   .big-heading {
     margin-bottom: 30px;
