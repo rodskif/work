@@ -235,7 +235,8 @@ html{
 .main-menu {
   position: static;
   height: 42px;
-  padding: 6px 0 7px 0;
+/*  padding: 6px 0 7px 0;*/
+  padding: 0;
   color: #484848;
   font-family: "Exo 2", Arial, sans-serif;
   font-size: 14px;
@@ -244,7 +245,9 @@ html{
   text-transform: uppercase;  
 }
 .main-menu li {
+  padding: 6px 0 7px 0;
   padding-right: 60px;
+  cursor: pointer;
 }
 .main-menu li:last-child {
   padding-right: 0;
@@ -254,13 +257,17 @@ html{
   padding-bottom: 2px;
 }
 .main-menu .nav-link:hover {
-  
+  box-shadow: 0 5px 0 0 #d35353;
+}
+.main-menu li:hover .nav-link {
   box-shadow: 0 5px 0 0 #d35353;
 }
 .dropdown-menu {
   left: -20px;
+  top: 42px;
   border: none;
   padding-top: 5px;
+  border-radius: 0;
 }
 .dropdown-menu a {
   font-family: "Exo 2", Arial, sans-serif;
