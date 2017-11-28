@@ -69,6 +69,7 @@ $(".jcarousel li").on("mouseenter", "a", function () {
 //});
 function change_img(id,path){
 	document.getElementById(id).src=path;
+//    document.getElementById(id).style="animation: fade 2s ease-in-out";
 	return false;
 }
 //use: main image= <img id="i201714" src="http://www.nashamoda.by/images/products/116005/thumbs/201716.JPG" ...>

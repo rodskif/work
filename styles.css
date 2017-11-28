@@ -639,9 +639,19 @@ button[data-toggle="collapse"] {
 .card-galery img.active {
   outline: 1px solid #cdcdcd;
 }
+/*
+.card-item img {
+  animation: fade 3s ease-in-out;  
+}
+*/
+
+@keyframes fade {
+    0% { opacity: 0; }   
+    100% { opacity: 1; }
+   }
+
+
 /*--------- styles for vertical sloder ------*/
-
-
 
 .jcarousel-wrapper {  
   /*the same as card galery*/
@@ -729,9 +739,6 @@ button[data-toggle="collapse"] {
 .current {
   border: 1px solid black;
 }
-
-
-
 
 /*------------- end vertical slider  ---------*/
 .card-detail p {
