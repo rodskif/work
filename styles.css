@@ -2710,6 +2710,9 @@ div.videoreview-item:last-of-type {
   .head .logo {
     padding-left: 10px;
   }
+  .header .carousel-item img {
+    min-height: 150px;
+  }
 /*------------------------------- 475 ------------------------------------*/
 @media only screen and (max-width: 475px) {
 /*
@@ -2899,6 +2902,10 @@ div.videoreview-item:last-of-type {
   .toggle-menu {
     padding-left: 0;
     margin-right: 0;
+  }
+  
+  .header .carousel-item img {
+    min-height: 130px;
   }
 /*
   .header {

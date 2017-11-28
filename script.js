@@ -66,6 +66,12 @@ $(".jcarousel li").on("mouseenter", "a", function () {
 //  $(".photo img").attr("src", currentSrc);
 //   return false;
 //});
+function change_img(id,path){
+	document.getElementById(id).src=path;
+	return false;
+}
+//use: main image= <img id="i201714" src="http://www.nashamoda.by/images/products/116005/thumbs/201716.JPG" ...>
+// thumbnail = <img onmouseenter="change_img('i201714', 'http://www.nashamoda.by/images/products/116005/thumbs/201714.JPG')" src="http://www.nashamoda.by/images/products/116005/thumbs/201714.JPG" alt="">
 
 //--------------------------- change size ----------------------------
 
