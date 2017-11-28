@@ -608,6 +608,14 @@ button[data-toggle="collapse"] {
 /*  height: auto;*/
   height: 450px;
 }
+.card-detail {
+  position: absolute;
+  top: 332px;
+  padding-left: 62px;
+  height: 115px;
+  background-color: #fff;
+}
+/*
 .card-hover-item .card-detail img {
   position: relative;
   width: 220px;
@@ -615,6 +623,7 @@ button[data-toggle="collapse"] {
   top: 0;
   right: 0;
 }
+*/
 .card-galery {
   
 }
@@ -637,8 +646,11 @@ button[data-toggle="collapse"] {
 .jcarousel-wrapper {  
   /*the same as card galery*/
   padding: 25px 10px;
-  width: 70px;
+/*  width: 70px;*/
+  width: 61px;
   height: 420px;
+  background-color: #fff;
+  z-index: 99;
 /*
     float: left;
     margin-top: 50px;
@@ -701,7 +713,7 @@ button[data-toggle="collapse"] {
 }
 
 .jcarousel-control-next {
-    bottom: 30px;
+    bottom: 25px;
 }
 
 .jcarousel-control-prev:hover span,
@@ -760,7 +772,8 @@ button[data-toggle="collapse"] {
   width: 280px;
   height: 450px;
 */
-  background-color: #fff;
+/*  background-color: #fff;*/
+  background-color: transparent;
   outline: 1px solid #cdcdcd;
   outline-offset: 0;
   cursor: pointer;

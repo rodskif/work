@@ -41,7 +41,7 @@
 })(jQuery);
 
 //--------------- photo gallery -------------
-//var currentSrc;
+
 var imgAtr;
 $(".jcarousel li").on("click", "a", function () {
 //    $(".current").removeClass("current");
@@ -53,10 +53,11 @@ $(".jcarousel li").on("click", "a", function () {
 //    currentSrc = $(this).prop("href");
    return false;
 });
+
 $(".jcarousel li").on("mouseenter", "a", function () {
   $(".current").removeClass("current");
   $(this).addClass("current");
-  $(".photo-hover").attr("src", $(this).prop("href"));
+ // $(".photo-hover").attr("src", $(this).prop("href"));
    return false;
 });
 
